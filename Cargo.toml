@@ -1,0 +1,15 @@
+[package]
+name = "io-utils"
+version = "0.1.0"
+authors = ["Ryan Lehmkuhl <ryanleh.ob@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+async-std = "1.9.0"
+crossbeam-utils = "0.8.1"
+futures = "0.3.12"
+
+[dev-dependencies]
+ark-std = { git = "https://github.com/arkworks-rs/utils", default-features = false }
+bench-utils = { git = "https://github.com/arkworks-rs/utils", default-features = false, features = ["print-trace"] }
+clap = "2.33.3"
