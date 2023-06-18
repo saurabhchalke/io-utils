@@ -65,7 +65,7 @@ impl ThreadedReader {
         let senders = Arc::new(Mutex::new(vec![sender]));
         let senders_clone = senders.clone();
         // Start the background reader thread
-        let handle = Arc::new(async_std::spawn(async {
+        let handle = Arc::new(task::spawn(async {
             Self::read_loop(reader, senders_clone).await
         }));
         Self {
